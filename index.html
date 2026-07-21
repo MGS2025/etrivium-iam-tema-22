@@ -428,7 +428,7 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c  ← signature</code></pre>
   <path d="M268 158 L172 158" stroke="#2d8659" stroke-width="2.5" marker-end="url(#a5)"/>
   <rect x="30" y="130" width="140" height="50" rx="5" fill="#888"/><text x="100" y="152" text-anchor="middle" class="t5">Navegador</text><text x="100" y="168" text-anchor="middle" class="s5">Muestra resultado</text>
   <text x="340" y="212" text-anchor="middle" style="font:10px system-ui;fill:#666">Ida (1→4): arriba → abajo · Vuelta (5→6): abajo → arriba, mismo camino, sentido inverso</text>
-  <defs><marker id="a5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="context-fill"/></marker></defs>
+  <defs><marker id="a5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="context-stroke"/></marker></defs>
   <rect x="30" y="234" width="620" height="60" rx="6" fill="#f4f4f4" stroke="#ccc"/>
   <text x="340" y="258" text-anchor="middle" style="font:700 11px system-ui;fill:#d13c3c">En ningún punto la capa de datos invoca directamente a la de presentación</text>
   <text x="340" y="278" text-anchor="middle" class="l5">La dependencia unidireccional (§4.1) se respeta en todo el recorrido de ida y vuelta</text>
@@ -502,10 +502,10 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c  ← signature</code></pre>
   <rect x="510" y="46" width="140" height="50" rx="5" fill="#2d8659"/><text x="580" y="68" text-anchor="middle" class="t9">Authorization Server</text><text x="580" y="84" text-anchor="middle" class="s9">Emite el token</text>
   <rect x="510" y="150" width="140" height="50" rx="5" fill="#e89822"/><text x="580" y="172" text-anchor="middle" class="t9">Resource Server</text><text x="580" y="188" text-anchor="middle" class="s9">Protege el recurso</text>
   <path d="M100 96 L100 130 L268 130" stroke="#0055a0" stroke-width="2.5" marker-end="url(#a9)" fill="none"/><text x="170" y="122" text-anchor="middle" style="font:9px system-ui;fill:#0055a0">1. autoriza</text>
-  <path d="M410 71 L508 71" stroke="#0055a0" stroke-width="2.5" marker-end="url(#a9)"/><text x="460" y="64" text-anchor="middle" style="font:9px system-ui;fill:#0055a0">2. solicita</text>
-  <path d="M580 96 L580 148" stroke="#2d8659" stroke-width="2.5" marker-end="url(#a9)"/><text x="612" y="126" text-anchor="middle" style="font:9px system-ui;fill:#2d8659">3. token</text>
-  <path d="M508 175 L412 96" stroke="#e89822" stroke-width="2.5" marker-end="url(#a9)" fill="none"/><text x="500" y="220" text-anchor="middle" style="font:9px system-ui;fill:#e89822">4. presenta token → accede</text>
-  <defs><marker id="a9" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="context-fill"/></marker></defs>
+  <path d="M410 60 L508 60" stroke="#0055a0" stroke-width="2.5" marker-end="url(#a9)"/><text x="460" y="54" text-anchor="middle" style="font:9px system-ui;fill:#0055a0">2. solicita</text>
+  <path d="M508 86 L410 86" stroke="#2d8659" stroke-width="2.5" marker-end="url(#a9)"/><text x="460" y="100" text-anchor="middle" style="font:9px system-ui;fill:#2d8659">3. token</text>
+  <path d="M412 96 L508 175" stroke="#e89822" stroke-width="2.5" marker-end="url(#a9)" fill="none"/><text x="500" y="220" text-anchor="middle" style="font:9px system-ui;fill:#e89822">4. presenta token → accede</text>
+  <defs><marker id="a9" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="context-stroke"/></marker></defs>
   <rect x="30" y="240" width="620" height="66" rx="6" fill="#f4f4f4" stroke="#ccc"/>
   <text x="340" y="264" text-anchor="middle" style="font:700 11px system-ui;fill:#d13c3c">El cliente nunca ve ni almacena la contraseña del usuario</text>
   <text x="340" y="282" text-anchor="middle" class="l9">JWT (header.payload.signature) es, con frecuencia, el formato concreto del token — no un sinónimo de OAuth</text>
