@@ -497,6 +497,8 @@ Por último, el **modelo de madurez de Richardson** —propuesto por Leonard Ric
 
 ## 7. Tendencias actuales en arquitecturas distribuidas
 
+> **Material complementario.** El enunciado oficial de este tema no nombra este apartado. Se mantiene porque esta materia envejece deprisa y conviene conocer su estado actual, pero lo exigible es lo que enumera el título del tema.
+
 ### 7.1. Microservicios
 
 Los **microservicios** son un estilo arquitectónico que estructura una aplicación como un conjunto de **servicios pequeños, autónomos y desplegables de forma independiente**, cada uno organizado en torno a una **capacidad de negocio concreta** y comunicándose mediante mecanismos ligeros —típicamente APIs REST o mensajería asíncrona— [NEWMAN, cap. 1].

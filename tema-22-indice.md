@@ -54,7 +54,7 @@
    6.5. RPC y RMI
    6.6. API REST y principios RESTful
 
-7. **Tendencias actuales en arquitecturas distribuidas**
+7. **Tendencias actuales en arquitecturas distribuidas (material complementario)**
    7.1. Microservicios
    7.2. Arquitectura orientada a eventos (EDA)
    7.3. Contenedores y orquestación
