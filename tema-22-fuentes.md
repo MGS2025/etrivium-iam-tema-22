@@ -14,7 +14,8 @@
 | `[RFC9112]` | IETF RFC 9112 — HTTP/1.1 |
 | `[RFC9113]` | IETF RFC 9113 — HTTP/2 |
 | `[RFC9114]` | IETF RFC 9114 — HTTP/3 |
-| `[RFC8446]` | IETF RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3 |
+| `[RFC9846]` | IETF RFC 9846 — The Transport Layer Security (TLS) Protocol Version 1.3 (julio de 2026). Obsoleta los RFC 5077, 5246, 6961, 7627, 8422 y 8446: es la especificación vigente de TLS 1.3 y sustituye a la de 2018 |
+| `[RFC8446]` | IETF RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3 (agosto de 2018). Obsoletado por el RFC 9846. Se conserva la referencia porque es la que recogen los temarios al uso |
 | `[FIELDING]` | Fielding, R. — *Architectural Styles and the Design of Network-based Software Architectures* (tesis doctoral, UC Irvine, 2000) — origen de REST |
 | `[RFC6749]` | IETF RFC 6749 — The OAuth 2.0 Authorization Framework |
 | `[RFC7519]` | IETF RFC 7519 — JSON Web Token (JWT) |
@@ -23,7 +24,8 @@
 | `[W3C-SOAP]` | W3C — SOAP Version 1.2 Part 1: Messaging Framework |
 | `[W3C-WSDL]` | W3C — Web Services Description Language (WSDL) 1.1 / 2.0 |
 | `[OASIS-UDDI]` | OASIS — UDDI Version 3.0.2 |
-| `[RFC1831]` | IETF RFC 1831 — RPC: Remote Procedure Call Protocol Specification Version 2 |
+| `[RFC5531]` | IETF RFC 5531 — RPC: Remote Procedure Call Protocol Specification Version 2 (mayo de 2009). Obsoleta el RFC 1831: mismo título y mismo protocolo (RPC versión 2); es la especificación vigente |
+| `[RFC1831]` | IETF RFC 1831 — RPC: Remote Procedure Call Protocol Specification Version 2 (agosto de 1995). Obsoletado por el RFC 5531. Se conserva la referencia porque es la que recogen los temarios al uso |
 | `[GARTNER-3TIER]` | Sinha, A. — *Client-Server Computing: Current Technology Review* (Comm. ACM, 1992) — origen del modelo 2/3 capas |
 | `[FOWLER-PEAA]` | Fowler, M. — *Patterns of Enterprise Application Architecture* (Addison-Wesley, 2002) — capas, patrones de acceso a datos |
 | `[ERL-SOA]` | Erl, T. — *SOA: Principles of Service Design* (Prentice Hall, 2007) |

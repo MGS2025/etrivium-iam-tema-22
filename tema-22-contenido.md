@@ -16,13 +16,13 @@
 
 Este tema incluye cuatro tipos de **cajas callout** para facilitar el estudio:
 
-> **[DATO CLAVE EXAMEN]** Información de alta densidad memorística, con alta probabilidad de aparecer en el test oficial.
+> **[DATO CLAVE]** Información de alta densidad memorística.
 
 > **[EJERCICIO RESUELTO]** Problema + solución paso a paso (elección arquitectónica razonada, diseño de una interfaz de servicio).
 
-> **[EJEMPLO AYTO MADRID]** Aplicación real de la teoría al entorno municipal (Sede Electrónica, Padrón, tributos, datos abiertos).
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** Aplicación real de la teoría al entorno municipal (Sede Electrónica, Padrón, tributos, datos abiertos).
 
-> **[REFERENCIA CRUZADA]** Enlace conceptual a otros temas del temario oficial.
+> **[RELACIÓN CON OTROS TEMAS]** Enlace conceptual a otros temas del temario oficial.
 
 Este tema es **agnóstico de lenguaje y plataforma**: a diferencia del Tema 21 (Java EE, donde el código Java tiene sentido porque el tema trata de esa plataforma concreta), aquí los ejemplos se expresan en los **formatos de intercambio propios del dominio** — peticiones HTTP, JSON, XML, fragmentos de WSDL — porque son los que un opositor debe reconocer con independencia de en qué lenguaje esté programado el cliente o el servidor. Las fuentes se citan con etiquetas breves tipo `[RFC9110]` o `[FIELDING, cap. 5]`; el registro completo está en `tema-22-fuentes.md`.
 
@@ -43,7 +43,7 @@ Conviene distinguir con precisión dos nociones que se confunden con frecuencia 
 
 Ambas nociones están relacionadas pero son independientes: una misma arquitectura de sistemas (por ejemplo, cliente/servidor de tres capas) puede desplegarse sobre topologías de red muy distintas, y viceversa.
 
-> **[DATO CLAVE EXAMEN]** No confundir **arquitectura de sistemas** (organización de componentes software: capas, servicios) con **arquitectura de red** (topología física/lógica de dispositivos de comunicaciones). El examen suele poner enunciados que mezclan deliberadamente ambos conceptos.
+> **[DATO CLAVE]** No confundir **arquitectura de sistemas** (organización de componentes software: capas, servicios) con **arquitectura de red** (topología física/lógica de dispositivos de comunicaciones).
 
 Toda arquitectura de sistemas se diseña persiguiendo un conjunto de **atributos de calidad** (también llamados *requisitos no funcionales*), que son los que en la práctica determinan si una arquitectura es «buena» para un contexto dado: **escalabilidad** (capacidad de crecer en carga sin rediseñar), **disponibilidad** (tiempo de servicio), **mantenibilidad** (coste de modificar), **seguridad**, **rendimiento** y **interoperabilidad** (capacidad de comunicarse con sistemas de terceros mediante estándares). Este tema recorre precisamente los modelos arquitectónicos —cliente/servidor, multicapa, orientado a servicios— que la industria ha ido desarrollando para maximizar estos atributos.
 
@@ -73,7 +73,7 @@ La evolución no se detiene en el cliente/servidor clásico. A medida que las ap
 | 2010s | Microservicios, arquitectura orientada a eventos | §7.1, §7.2 |
 | 2010s-actualidad | Contenedores, orquestación y computación en la nube | §7.3, §7.4 |
 
-> **[REFERENCIA CRUZADA]** El **Tema 31** (paradigmas de computación distribuida y servicios en la nube: IaaS, PaaS, SaaS) desarrolla en profundidad el último eslabón de esta evolución. Este tema (22) sienta las bases arquitectónicas —cliente/servidor, capas, servicios— sobre las que se apoya todo lo que el Tema 31 trata a nivel de infraestructura de provisión.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 31** (paradigmas de computación distribuida y servicios en la nube: IaaS, PaaS, SaaS) desarrolla en profundidad el último eslabón de esta evolución. Este tema (22) sienta las bases arquitectónicas —cliente/servidor, capas, servicios— sobre las que se apoya todo lo que el Tema 31 trata a nivel de infraestructura de provisión.
 
 ---
 
@@ -90,7 +90,7 @@ Esta relación es **asimétrica**: el cliente conoce la dirección del servidor 
 
 Un mismo proceso puede desempeñar simultáneamente ambos roles frente a distintos interlocutores: un servidor de aplicaciones es «servidor» frente al navegador del usuario, pero actúa como «cliente» cuando consulta a un servidor de base de datos o invoca un servicio web externo. Este encadenamiento de relaciones cliente/servidor es precisamente lo que hace posible las arquitecturas multicapa del §4.
 
-> **[DATO CLAVE EXAMEN]** La relación cliente/servidor es **asimétrica y basada en petición-respuesta**: el cliente inicia, el servidor responde. Un mismo componente puede ser cliente en una relación y servidor en otra — es la clave para entender por qué las arquitecturas n-capa (§3.3) son, en el fondo, **cadenas** de relaciones cliente/servidor.
+> **[DATO CLAVE]** La relación cliente/servidor es **asimétrica y basada en petición-respuesta**: el cliente inicia, el servidor responde. Un mismo componente puede ser cliente en una relación y servidor en otra — es la clave para entender por qué las arquitecturas n-capa (§3.3) son, en el fondo, **cadenas** de relaciones cliente/servidor.
 
 ### 2.2. Componentes principales
 
@@ -111,9 +111,9 @@ El **cliente** es el proceso que solicita el servicio y, habitualmente, presenta
 | Capacidad offline | Limitada o nula | Posible con sincronización posterior |
 | Coste de mantenimiento | Bajo (un solo lugar que actualizar) | Alto (parque de puestos heterogéneo) |
 
-> **[DATO CLAVE EXAMEN]** El **problema de despliegue del cliente pesado** (necesidad de instalar/actualizar software en cada puesto) fue uno de los motores históricos que impulsó la migración hacia **clientes ligeros basados en navegador** desde finales de los 90, y sigue siendo el argumento arquitectónico dominante a favor de las aplicaciones web frente a las de escritorio tradicionales.
+> **[DATO CLAVE]** El **problema de despliegue del cliente pesado** (necesidad de instalar/actualizar software en cada puesto) fue uno de los motores históricos que impulsó la migración hacia **clientes ligeros basados en navegador** desde finales de los 90, y sigue siendo el argumento arquitectónico dominante a favor de las aplicaciones web frente a las de escritorio tradicionales.
 
-> **[REFERENCIA CRUZADA]** El **Tema 23** (aplicaciones web: desarrollo front-end, HTML, navegadores, lenguajes de script) desarrolla en detalle la implementación concreta del cliente ligero. El **Tema 24** (desarrollo para dispositivos móviles) trata el caso particular de clientes nativos frente a híbridos, un continuo similar entre «pesado» (app nativa) y «ligero» (web app/PWA).
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 23** (aplicaciones web: desarrollo front-end, HTML, navegadores, lenguajes de script) desarrolla en detalle la implementación concreta del cliente ligero. El **Tema 24** (desarrollo para dispositivos móviles) trata el caso particular de clientes nativos frente a híbridos, un continuo similar entre «pesado» (app nativa) y «ligero» (web app/PWA).
 
 #### 2.2.2. Servidor: gestión de recursos y concurrencia
 
@@ -124,9 +124,9 @@ Dos responsabilidades son propias del servidor y no tienen equivalente en el cli
 - **Gestión de recursos compartidos**: el servidor debe evitar que el acceso concurrente de varios clientes corrompa el recurso (por ejemplo, dos actualizaciones simultáneas sobre el mismo registro de una base de datos). Esto exige mecanismos de **control de concurrencia** (bloqueos, control de concurrencia optimista, transacciones).
 - **Escalabilidad ante múltiples clientes**: un servidor debe atender, en el caso general, a **muchos** clientes simultáneos. Las estrategias típicas incluyen el uso de **multihilo/multiproceso** (un hilo o proceso por conexión, o un *pool* de hilos reutilizado), **E/S asíncrona no bloqueante** (un único hilo que multiplexa muchas conexiones, como en servidores basados en eventos) y, a mayor escala, el **escalado horizontal** mediante varias instancias del servidor detrás de un balanceador de carga.
 
-> **[DATO CLAVE EXAMEN]** Existen dos estrategias de **escalado**: **vertical** (añadir más CPU/memoria a una misma máquina, con un límite físico y de coste) y **horizontal** (añadir más máquinas/instancias en paralelo, coordinadas por un balanceador). Las arquitecturas modernas —n-capas, microservicios, cloud— priorizan el escalado horizontal precisamente porque no tiene techo físico y permite tolerancia a fallos (si una instancia cae, las demás siguen sirviendo).
+> **[DATO CLAVE]** Existen dos estrategias de **escalado**: **vertical** (añadir más CPU/memoria a una misma máquina, con un límite físico y de coste) y **horizontal** (añadir más máquinas/instancias en paralelo, coordinadas por un balanceador). Las arquitecturas modernas —n-capas, microservicios, cloud— priorizan el escalado horizontal precisamente porque no tiene techo físico y permite tolerancia a fallos (si una instancia cae, las demás siguen sirviendo).
 
-> **[EJEMPLO AYTO MADRID]** En días de campaña de renovación del Padrón o de plazos fiscales, el servidor de la Sede Electrónica recibe picos de tráfico muy superiores a la media. Una arquitectura que solo permita escalado vertical obligaría a sobredimensionar permanentemente el hardware (coste ocioso el resto del año); una arquitectura preparada para escalado horizontal puede añadir instancias temporales del servidor de aplicaciones solo durante el pico, y retirarlas después.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** En días de campaña de renovación del Padrón o de plazos fiscales, el servidor de la Sede Electrónica recibe picos de tráfico muy superiores a la media. Una arquitectura que solo permita escalado vertical obligaría a sobredimensionar permanentemente el hardware (coste ocioso el resto del año); una arquitectura preparada para escalado horizontal puede añadir instancias temporales del servidor de aplicaciones solo durante el pico, y retirarlas después.
 
 #### 2.2.3. Middleware: conectividad y abstracción
 
@@ -142,13 +142,13 @@ Se distinguen varias familias de middleware según el servicio que abstraen:
 | **Middleware de servicios web** | El descubrimiento e invocación de servicios remotos mediante estándares abiertos | Contenedores SOAP, *gateways* API REST |
 | **Middleware transaccional** | La coordinación de transacciones que abarcan varios recursos | Gestores de transacciones distribuidas (protocolo de *commit* en dos fases) |
 
-> **[REFERENCIA CRUZADA]** El middleware orientado a mensajes (MOM) es la base técnica de la **arquitectura orientada a eventos** (EDA), desarrollada en el §7.2 de este mismo tema, y de la integración asíncrona entre sistemas heredados que se ilustra en el caso de referencia de la Sede Electrónica.
+> **[RELACIÓN CON OTROS TEMAS]** El middleware orientado a mensajes (MOM) es la base técnica de la **arquitectura orientada a eventos** (EDA), desarrollada en el §7.2 de este mismo tema, y de la integración asíncrona entre sistemas heredados que se ilustra en el caso de referencia de la Sede Electrónica.
 
 #### 2.2.4. Infraestructura de comunicaciones
 
 Por último, ningún componente cliente/servidor puede comunicarse sin una **infraestructura de comunicaciones** subyacente: la red física y lógica (cableado, conmutadores, encaminadores, direccionamiento IP) y la **pila de protocolos** que garantiza el transporte fiable de los mensajes entre cliente y servidor.
 
-> **[REFERENCIA CRUZADA]** La infraestructura de comunicaciones —el modelo TCP/IP y el modelo OSI, los protocolos de nivel de transporte y de red— se desarrolla en profundidad en el **Tema 34**. Este tema (22) se sitúa deliberadamente en el **nivel de aplicación** de esa pila: los protocolos que aquí se estudian (HTTP, SOAP, REST) se apoyan sobre TCP/IP sin necesidad de conocer sus detalles internos, del mismo modo que una aplicación cliente/servidor no necesita saber cómo se enruta cada paquete.
+> **[RELACIÓN CON OTROS TEMAS]** La infraestructura de comunicaciones —el modelo TCP/IP y el modelo OSI, los protocolos de nivel de transporte y de red— se desarrolla en profundidad en el **Tema 34**. Este tema (22) se sitúa deliberadamente en el **nivel de aplicación** de esa pila: los protocolos que aquí se estudian (HTTP, SOAP, REST) se apoyan sobre TCP/IP sin necesidad de conocer sus detalles internos, del mismo modo que una aplicación cliente/servidor no necesita saber cómo se enruta cada paquete.
 
 ---
 
@@ -164,9 +164,9 @@ Es el modelo cliente/servidor «clásico» de finales de los 80 y los 90: un cli
 
 **Inconvenientes**, que motivaron la evolución hacia el modelo de 3 capas: **acoplamiento fuerte** entre el cliente y el esquema de la base de datos (cualquier cambio en el modelo de datos obliga a tocar el cliente); **escalabilidad limitada**, porque cada cliente mantiene una conexión directa y persistente al SGBD, cuyo número de conexiones concurrentes es un recurso finito; **problema de despliegue del cliente pesado** (§2.2.1); y **seguridad más difícil de centralizar**, porque las reglas de negocio ejecutadas en el cliente son, en última instancia, manipulables por quien controla ese puesto.
 
-> **[DATO CLAVE EXAMEN]** En 2 capas, la lógica de negocio se reparte de forma **ambigua** entre el cliente (código de la aplicación) y el servidor de datos (procedimientos almacenados/disparadores) — no hay un lugar único y claro donde «vive» la regla de negocio. Esta ambigüedad es precisamente lo que resuelve el modelo de 3 capas.
+> **[DATO CLAVE]** En 2 capas, la lógica de negocio se reparte de forma **ambigua** entre el cliente (código de la aplicación) y el servidor de datos (procedimientos almacenados/disparadores) — no hay un lugar único y claro donde «vive» la regla de negocio. Esta ambigüedad es precisamente lo que resuelve el modelo de 3 capas.
 
-> **[REFERENCIA CRUZADA]** Los **procedimientos almacenados y disparadores** que en 2 capas concentran parte de la lógica de negocio en el servidor de datos son objeto específico del **Tema 19** (lenguajes de interrogación de bases de datos, ANSI SQL, procedimientos almacenados, eventos y disparadores).
+> **[RELACIÓN CON OTROS TEMAS]** Los **procedimientos almacenados y disparadores** que en 2 capas concentran parte de la lógica de negocio en el servidor de datos son objeto específico del **Tema 19** (lenguajes de interrogación de bases de datos, ANSI SQL, procedimientos almacenados, eventos y disparadores).
 
 ### 3.2. Arquitectura de tres capas (3-Tier)
 
@@ -178,22 +178,22 @@ La arquitectura de **tres capas** introduce un nivel intermedio, el **servidor d
 
 Esta separación —desarrollada con más detalle en el §4 de este tema, dedicado íntegramente a las arquitecturas multicapa— resuelve directamente los problemas del modelo de 2 capas: el cliente se **desacopla** del esquema de datos (solo conoce la interfaz que expone el servidor de aplicaciones), la lógica de negocio tiene un **lugar único y bien definido**, y el servidor de aplicaciones puede **agrupar y reutilizar conexiones** al SGBD mediante un *pool* de conexiones, en lugar de que cada cliente mantenga la suya propia — lo que mejora sustancialmente la escalabilidad.
 
-> **[DATO CLAVE EXAMEN]** La ventaja arquitectónica central de pasar de 2 a 3 capas es el **desacoplamiento**: el cliente ya no conoce el esquema de la base de datos, sino únicamente el **contrato** (interfaz) que le ofrece la capa de negocio. Cambiar el modelo de datos, o incluso el motor de base de datos, no debería requerir tocar el cliente.
+> **[DATO CLAVE]** La ventaja arquitectónica central de pasar de 2 a 3 capas es el **desacoplamiento**: el cliente ya no conoce el esquema de la base de datos, sino únicamente el **contrato** (interfaz) que le ofrece la capa de negocio. Cambiar el modelo de datos, o incluso el motor de base de datos, no debería requerir tocar el cliente.
 
 ### 3.3. Arquitecturas n-capas (n-Tier)
 
 Las arquitecturas **n-capas** generalizan el modelo de 3 capas añadiendo **niveles adicionales**, tanto lógicos como físicos, según las necesidades de la aplicación: un balanceador de carga delante de varios servidores de aplicaciones, una capa de caché entre la capa de negocio y la de datos, una capa de integración que habla con sistemas externos mediante servicios web, o una capa de colas de mensajes para procesamiento asíncrono.
 
-Es fundamental distinguir dos nociones que el examen puede confundir deliberadamente:
+Es fundamental distinguir dos nociones:
 
 - **Capa lógica** (*layer*): una agrupación de responsabilidades en el diseño del software (presentación, negocio, datos, integración…), independiente de dónde se despliegue físicamente.
 - **Nivel físico** (*tier*): una máquina o proceso independiente donde se despliega una o varias capas lógicas.
 
 No siempre coinciden: una aplicación puede tener **tres capas lógicas** (presentación, negocio, datos) desplegadas en **un único nivel físico** (todo en el mismo servidor, típico de un entorno de desarrollo), o **tres capas lógicas** repartidas en **cinco niveles físicos** (balanceador + dos servidores de aplicaciones + caché + clúster de base de datos), típico de un entorno de producción de alta disponibilidad.
 
-> **[DATO CLAVE EXAMEN]** *Layer* (capa lógica de responsabilidad) ≠ *Tier* (nivel físico de despliegue). Es una de las distinciones más preguntadas de este bloque: el número de capas lógicas de un diseño no tiene por qué coincidir con el número de servidores físicos en los que se despliega.
+> **[DATO CLAVE]** *Layer* (capa lógica de responsabilidad) ≠ *Tier* (nivel físico de despliegue). El número de capas lógicas de un diseño no tiene por qué coincidir con el número de servidores físicos en los que se despliega.
 
-> **[EJEMPLO AYTO MADRID]** La Sede Electrónica del Ayuntamiento, en producción, no se despliega en una única máquina: un **balanceador de carga** reparte las peticiones entre varias instancias del **servidor de aplicaciones** (capa de negocio replicada por alta disponibilidad), que a su vez consultan una **capa de caché** para las operaciones de solo lectura más frecuentes (por ejemplo, el callejero) antes de llegar al **clúster de base de datos**. Son tres capas lógicas clásicas, desplegadas en bastantes más de tres niveles físicos.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** La Sede Electrónica del Ayuntamiento, en producción, no se despliega en una única máquina: un **balanceador de carga** reparte las peticiones entre varias instancias del **servidor de aplicaciones** (capa de negocio replicada por alta disponibilidad), que a su vez consultan una **capa de caché** para las operaciones de solo lectura más frecuentes (por ejemplo, el callejero) antes de llegar al **clúster de base de datos**. Son tres capas lógicas clásicas, desplegadas en bastantes más de tres niveles físicos.
 
 ### 3.4. Comparativa entre modelos
 
@@ -219,7 +219,7 @@ La **arquitectura multicapa** (o *layered architecture*) organiza el software en
 
 Esta disciplina, aparentemente sencilla, es la que permite **sustituir** una capa sin afectar a las demás: cambiar la interfaz de usuario (de web a app móvil) sin tocar la lógica de negocio, o cambiar el motor de base de datos sin tocar la capa de presentación, siempre que el contrato entre capas se respete.
 
-> **[DATO CLAVE EXAMEN]** Las dos reglas de la arquitectura en capas son **encapsulación** (cada capa oculta su implementación tras una interfaz) y **dependencia unidireccional** (de arriba hacia abajo, nunca al revés). Violar la segunda regla —por ejemplo, que la capa de datos invoque directamente a la de presentación— es el antipatrón más citado en exámenes de este bloque.
+> **[DATO CLAVE]** Las dos reglas de la arquitectura en capas son **encapsulación** (cada capa oculta su implementación tras una interfaz) y **dependencia unidireccional** (de arriba hacia abajo, nunca al revés). Violar la segunda regla —por ejemplo, que la capa de datos invoque directamente a la de presentación— es el antipatrón más habitual.
 
 ### 4.2. Capa de presentación
 
@@ -237,7 +237,7 @@ La **capa de lógica de negocio** (o capa de aplicación) contiene las **reglas 
 
 La **capa de acceso a datos** (o de persistencia) es responsable de **leer y escribir** el estado de la aplicación en un almacenamiento duradero —típicamente un SGBD relacional, aunque puede ser NoSQL, un sistema de ficheros o un servicio externo—, y de **traducir** entre el modelo de objetos/estructuras que usa la capa de negocio y el modelo de almacenamiento subyacente.
 
-> **[REFERENCIA CRUZADA]** El diseño concreto de esta capa —modelo entidad-relación, normalización, SGBD relacionales frente a NoSQL— es objeto de los **Temas 15, 16 y 17**. Este tema (22) se limita a situar la capa de datos como el nivel más bajo de la arquitectura multicapa, sin entrar en el diseño interno del modelo de datos.
+> **[RELACIÓN CON OTROS TEMAS]** El diseño concreto de esta capa —modelo entidad-relación, normalización, SGBD relacionales frente a NoSQL— es objeto de los **Temas 15, 16 y 17**. Este tema (22) se limita a situar la capa de datos como el nivel más bajo de la arquitectura multicapa, sin entrar en el diseño interno del modelo de datos.
 
 ### 4.5. Flujo de procesamiento de una petición
 
@@ -260,7 +260,7 @@ La arquitectura multicapa no es solo una cuestión de «orden»: tiene consecuen
 - **Mantenimiento**: un cambio localizado en una capa (por ejemplo, rediseñar la interfaz de usuario) tiene un **radio de impacto limitado** a esa capa, siempre que el contrato con las capas adyacentes se mantenga estable. Esto reduce el riesgo y el coste de las modificaciones.
 - **Seguridad**: centralizar las reglas de negocio y de autorización en una única capa (la de negocio) evita que la seguridad dependa de un cliente que el usuario controla y puede manipular; la capa de presentación puede ofrecer una experiencia amigable, pero la decisión de seguridad real se toma en el servidor.
 
-> **[DATO CLAVE EXAMEN]** Nunca confiar en la **validación del lado cliente** como mecanismo de seguridad: un cliente ligero (navegador) es manipulable por el propio usuario (herramientas de desarrollador, peticiones directas a la API). La validación de negocio y de seguridad **siempre** debe repetirse, de forma autoritativa, en el servidor.
+> **[DATO CLAVE]** Nunca confiar en la **validación del lado cliente** como mecanismo de seguridad: un cliente ligero (navegador) es manipulable por el propio usuario (herramientas de desarrollador, peticiones directas a la API). La validación de negocio y de seguridad **siempre** debe repetirse, de forma autoritativa, en el servidor.
 
 ---
 
@@ -283,9 +283,9 @@ La **arquitectura orientada a servicios** (*Service-Oriented Architecture*, SOA)
 - **Autonomía**: cada servicio controla su propia lógica y, en el diseño más maduro, sus propios datos.
 - **Componibilidad** (*composability*): los servicios pueden combinarse (**orquestación** o **coreografía**) para construir procesos de negocio más complejos.
 
-> **[DATO CLAVE EXAMEN]** SOA es un **estilo arquitectónico**, no un producto ni un protocolo concreto. Los **servicios web** (§5.3) son la implementación más habitual de SOA, pero no la única —conceptualmente, SOA es anterior y más amplio que «servicios web», del mismo modo que «arquitectura cliente/servidor» es anterior y más amplia que «aplicación web».
+> **[DATO CLAVE]** SOA es un **estilo arquitectónico**, no un producto ni un protocolo concreto. Los **servicios web** (§5.3) son la implementación más habitual de SOA, pero no la única —conceptualmente, SOA es anterior y más amplio que «servicios web», del mismo modo que «arquitectura cliente/servidor» es anterior y más amplia que «aplicación web».
 
-> **[REFERENCIA CRUZADA]** Los **microservicios** (§7.1) se presentan a menudo como una evolución o una reinterpretación moderna de SOA, con matices importantes que se explican en ese apartado: mientras SOA tiende a compartir infraestructura común (un **bus de servicios empresarial**, ESB), los microservicios enfatizan la autonomía total, incluida la de los datos.
+> **[RELACIÓN CON OTROS TEMAS]** Los **microservicios** (§7.1) se presentan a menudo como una evolución o una reinterpretación moderna de SOA, con matices importantes que se explican en ese apartado: mientras SOA tiende a compartir infraestructura común (un **bus de servicios empresarial**, ESB), los microservicios enfatizan la autonomía total, incluida la de los datos.
 
 ### 5.3. Servicios web: definición y características
 
@@ -321,7 +321,7 @@ Existen dos estilos dominantes de servicios web, con filosofías de diseño dist
 
 Sus rasgos característicos son un **contrato formal y estricto**, descrito en WSDL (§6.4); un modelo de **operaciones nombradas** (RPC-like: `ConsultarExpediente`, `LiquidarTasa`) frente al modelo orientado a recursos de REST; y un ecosistema de extensiones estandarizadas conocido como **WS-\*** (WS-Security para seguridad a nivel de mensaje, WS-ReliableMessaging para entrega garantizada, WS-AtomicTransaction para transacciones distribuidas), que lo hacen especialmente robusto en escenarios empresariales exigentes —integración bancaria, sistemas de pago, transacciones distribuidas entre organismos— a cambio de mayor complejidad y verbosidad.
 
-> **[DATO CLAVE EXAMEN]** SOAP no está «muerto»: sigue siendo el estándar de facto en integraciones empresariales que requieren **garantías formales fuertes** (transacciones distribuidas, seguridad a nivel de mensaje, contratos estrictos), típicas de banca, seguros y de muchos sistemas heredados de la Administración Pública. REST domina en APIs públicas y en aplicaciones web/móviles modernas, pero no ha sustituido a SOAP en todos los escenarios.
+> **[DATO CLAVE]** SOAP no está «muerto»: sigue siendo el estándar de facto en integraciones empresariales que requieren **garantías formales fuertes** (transacciones distribuidas, seguridad a nivel de mensaje, contratos estrictos), típicas de banca, seguros y de muchos sistemas heredados de la Administración Pública. REST domina en APIs públicas y en aplicaciones web/móviles modernas, pero no ha sustituido a SOAP en todos los escenarios.
 
 #### 5.4.2. Servicios REST
 
@@ -355,7 +355,7 @@ Este estilo se desarrolla con detalle en el §6.6 (API REST y principios RESTful
 | Peso de los mensajes | Mayor (envoltorio XML) | Menor (JSON compacto) |
 | Escenario típico | Integración empresarial crítica, sistemas heredados | APIs públicas, aplicaciones web/móviles |
 
-> **[EJEMPLO AYTO MADRID]** En el caso de referencia de la Sede Electrónica, el sistema de **Tributos**, heredado y construido hace más de una década, expone su lógica de liquidación mediante un servicio **SOAP** con WSDL formal (integración estable y crítica, con garantías transaccionales). La nueva capa de negocio de la Sede, en cambio, expone hacia el navegador y hacia aplicaciones móviles una **API REST** en JSON, más ligera y natural para clientes web modernos. Ambos estilos conviven en la misma arquitectura, cada uno donde mejor encaja.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** En el caso de referencia de la Sede Electrónica, el sistema de **Tributos**, heredado y construido hace más de una década, expone su lógica de liquidación mediante un servicio **SOAP** con WSDL formal (integración estable y crítica, con garantías transaccionales). La nueva capa de negocio de la Sede, en cambio, expone hacia el navegador y hacia aplicaciones móviles una **API REST** en JSON, más ligera y natural para clientes web modernos. Ambos estilos conviven en la misma arquitectura, cada uno donde mejor encaja.
 
 ---
 
@@ -378,15 +378,15 @@ Este estilo se desarrolla con detalle en el §6.6 (API REST y principios RESTful
 | **4xx** | Error del cliente | `400 Bad Request`, `401 Unauthorized`, `403 Forbidden`, `404 Not Found` |
 | **5xx** | Error del servidor | `500 Internal Server Error`, `503 Service Unavailable` |
 
-> **[DATO CLAVE EXAMEN]** Distinguir bien **401 Unauthorized** (el cliente no está autenticado, o su autenticación no es válida) de **403 Forbidden** (el cliente está autenticado, pero no tiene permiso para esa acción concreta). Es una de las confusiones más explotadas en preguntas tipo test de este bloque.
+> **[DATO CLAVE]** Distinguir bien **401 Unauthorized** (el cliente no está autenticado, o su autenticación no es válida) de **403 Forbidden** (el cliente está autenticado, pero no tiene permiso para esa acción concreta).
 
-**HTTPS** no es un protocolo distinto de HTTP, sino **HTTP transportado sobre una conexión cifrada con TLS** (*Transport Layer Security*) [RFC8446]. TLS aporta tres garantías sobre el canal de comunicación: **confidencialidad** (el contenido viaja cifrado, ilegible para un tercero que intercepte el tráfico), **integridad** (cualquier alteración del mensaje en tránsito es detectable) y **autenticación del servidor** (mediante un **certificado digital X.509**, el cliente verifica que se está comunicando realmente con el servidor que dice ser, no con un impostor).
+**HTTPS** no es un protocolo distinto de HTTP, sino **HTTP transportado sobre una conexión cifrada con TLS** (*Transport Layer Security*) [RFC9846]. TLS aporta tres garantías sobre el canal de comunicación: **confidencialidad** (el contenido viaja cifrado, ilegible para un tercero que intercepte el tráfico), **integridad** (cualquier alteración del mensaje en tránsito es detectable) y **autenticación del servidor** (mediante un **certificado digital X.509**, el cliente verifica que se está comunicando realmente con el servidor que dice ser, no con un impostor).
 
-> **[REFERENCIA CRUZADA]** El **Tema 35** (Internet: arquitectura de red, protocolos HTTP, HTTPS y SSL/TLS) desarrolla en profundidad el propio protocolo TLS —el proceso de negociación (*handshake*), las versiones históricas SSL/TLS y su papel en la pila de comunicaciones de Internet. Este tema (22) sitúa HTTP/HTTPS como el **protocolo de aplicación** sobre el que se construyen los servicios web, sin entrar en el detalle del cifrado. El **Tema 32** (seguridad de los sistemas de información: técnicas criptográficas, firma digital) completa la base criptográfica que sustenta TLS y la firma de tokens JWT (§6.2).
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 35** (Internet: arquitectura de red, protocolos HTTP, HTTPS y SSL/TLS) desarrolla en profundidad el propio protocolo TLS —el proceso de negociación (*handshake*), las versiones históricas SSL/TLS y su papel en la pila de comunicaciones de Internet. Este tema (22) sitúa HTTP/HTTPS como el **protocolo de aplicación** sobre el que se construyen los servicios web, sin entrar en el detalle del cifrado. El **Tema 32** (seguridad de los sistemas de información: técnicas criptográficas, firma digital) completa la base criptográfica que sustenta TLS y la firma de tokens JWT (§6.2).
 
 El propio protocolo HTTP ha evolucionado en varias versiones, relevantes para entender el rendimiento de los servicios web actuales: **HTTP/1.1** [RFC9112], vigente desde 1997 y aún el más extendido, procesa las peticiones de una conexión de forma esencialmente secuencial, lo que en páginas o APIs con muchas peticiones simultáneas provoca el problema conocido como *head-of-line blocking* (una petición lenta bloquea a las que la siguen en la misma conexión). **HTTP/2** [RFC9113] introduce la **multiplexación**: varias peticiones y respuestas viajan intercaladas sobre una **única conexión TCP**, eliminando ese bloqueo a nivel de aplicación y reduciendo la sobrecarga de abrir múltiples conexiones. **HTTP/3** [RFC9114] da un paso más y sustituye el transporte TCP por **QUIC** (sobre UDP), eliminando también el *head-of-line blocking* que persistía a nivel de transporte en HTTP/2 y acelerando la reconexión tras una pérdida de red — un cambio orientado especialmente a clientes móviles con conectividad inestable.
 
-> **[DATO CLAVE EXAMEN]** La evolución HTTP/1.1 → HTTP/2 → HTTP/3 es, sobre todo, una evolución de **rendimiento del transporte** (multiplexación, menos bloqueo, menor latencia de reconexión), no un cambio en la semántica de la aplicación: los verbos, las cabeceras y los códigos de estado estudiados en este apartado son **los mismos** en las tres versiones [RFC9110].
+> **[DATO CLAVE]** La evolución HTTP/1.1 → HTTP/2 → HTTP/3 es, sobre todo, una evolución de **rendimiento del transporte** (multiplexación, menos bloqueo, menor latencia de reconexión), no un cambio en la semántica de la aplicación: los verbos, las cabeceras y los códigos de estado estudiados en este apartado son **los mismos** en las tres versiones [RFC9110].
 
 ### 6.2. Autenticación y autorización (OAuth 2.0 y JWT)
 
@@ -402,9 +402,9 @@ eyJzdWIiOiIxMjM0Iiwicm9sIjoiY2l1ZGFkYW5vIn0.  ← payload (claims: sub, rol…)
 SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c  ← signature
 ```
 
-> **[DATO CLAVE EXAMEN]** OAuth 2.0 es un **framework de autorización**; JWT es un **formato de token**. No son alternativas entre sí ni sinónimos: OAuth 2.0 define **cómo se obtiene** un token de forma segura; JWT es, muy a menudo, **el formato concreto** que adopta ese token. Confundir «usar JWT» con «implementar OAuth 2.0» es un error frecuente y muy preguntado.
+> **[DATO CLAVE]** OAuth 2.0 es un **framework de autorización**; JWT es un **formato de token**. No son alternativas entre sí ni sinónimos: OAuth 2.0 define **cómo se obtiene** un token de forma segura; JWT es, muy a menudo, **el formato concreto** que adopta ese token. Confundir «usar JWT» con «implementar OAuth 2.0» es un error frecuente.
 
-> **[REFERENCIA CRUZADA]** El **Tema 32** (conceptos de seguridad de los sistemas de información: técnicas criptográficas y mecanismos de firma digital) desarrolla el fundamento criptográfico —firma digital, funciones *hash*, criptografía asimétrica— que hace posible verificar la *signature* de un JWT sin contactar al emisor en cada petición.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 32** (conceptos de seguridad de los sistemas de información: técnicas criptográficas y mecanismos de firma digital) desarrolla el fundamento criptográfico —firma digital, funciones *hash*, criptografía asimétrica— que hace posible verificar la *signature* de un JWT sin contactar al emisor en cada petición.
 
 ### 6.3. XML y JSON
 
@@ -427,7 +427,7 @@ SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c  ← signature
 | Espacios de nombres | Sí (permite mezclar vocabularios) | No de forma nativa |
 | Uso dominante | SOAP, documentos estructurados complejos, estándares Administración | APIs REST, configuración, intercambio ligero |
 
-> **[REFERENCIA CRUZADA]** El **Esquema Nacional de Interoperabilidad** (ENI, desarrollado en el **Tema 39**) recoge un catálogo de estándares abiertos —entre ellos XML y JSON— de uso obligatorio en los sistemas de información de las Administraciones Públicas españolas para garantizar el intercambio de información entre organismos [ENI].
+> **[RELACIÓN CON OTROS TEMAS]** El **Esquema Nacional de Interoperabilidad** (ENI, desarrollado en el **Tema 39**) recoge un catálogo de estándares abiertos —entre ellos XML y JSON— de uso obligatorio en los sistemas de información de las Administraciones Públicas españolas para garantizar el intercambio de información entre organismos [ENI].
 
 ### 6.4. SOAP, WSDL y UDDI
 
@@ -447,17 +447,17 @@ Completando la tríada de estándares clásicos del ecosistema de servicios web 
 </wsdl:portType>
 ```
 
-> **[DATO CLAVE EXAMEN]** **UDDI** es, en la práctica actual, un estándar en **desuso**: la promesa de un registro público universal de servicios nunca llegó a adoptarse a gran escala, y su función de «catálogo descubrible» ha sido sustituida por **catálogos de API modernos** (portales de desarrollador, especificaciones OpenAPI/Swagger) en el mundo REST. Sigue siendo materia de examen por su papel histórico y porque puede aparecer citado en sistemas heredados.
+> **[DATO CLAVE]** **UDDI** es, en la práctica actual, un estándar en **desuso**: la promesa de un registro público universal de servicios nunca llegó a adoptarse a gran escala, y su función de «catálogo descubrible» ha sido sustituida por **catálogos de API modernos** (portales de desarrollador, especificaciones OpenAPI/Swagger) en el mundo REST. Conserva interés por su papel histórico y porque puede aparecer citado en sistemas heredados.
 
 ### 6.5. RPC y RMI
 
-**RPC** (*Remote Procedure Call*) [RFC1831] es un paradigma de comunicación en el que un programa invoca un procedimiento que se ejecuta en **otro espacio de direcciones** —habitualmente en otra máquina— **como si fuera una llamada local**, ocultando al programador los detalles de serialización de parámetros, transporte de red y deserialización de la respuesta. Es el paradigma conceptual subyacente a SOAP en su modelo de «operaciones» (§5.4.1) y a muchos middlewares orientados a objetos.
+**RPC** (*Remote Procedure Call*) [RFC5531] es un paradigma de comunicación en el que un programa invoca un procedimiento que se ejecuta en **otro espacio de direcciones** —habitualmente en otra máquina— **como si fuera una llamada local**, ocultando al programador los detalles de serialización de parámetros, transporte de red y deserialización de la respuesta. Es el paradigma conceptual subyacente a SOAP en su modelo de «operaciones» (§5.4.1) y a muchos middlewares orientados a objetos.
 
 **RMI** (*Remote Method Invocation*) es la implementación nativa de este paradigma en la plataforma Java: permite invocar **métodos de objetos remotos** de forma transparente, apoyándose en *stubs* (representantes locales del objeto remoto, del lado del cliente) y *skeletons* (del lado del servidor), que se encargan de la serialización.
 
-> **[DATO CLAVE EXAMEN]** RPC es el **paradigma general** («invocar algo remoto como si fuera local»); RMI es la **implementación específica de Java**. SOAP puede entenderse como una forma de RPC sobre HTTP con mensajes XML estandarizados y neutrales respecto al lenguaje, mientras que RMI está limitado a comunicación entre extremos Java.
+> **[DATO CLAVE]** RPC es el **paradigma general** («invocar algo remoto como si fuera local»); RMI es la **implementación específica de Java**. SOAP puede entenderse como una forma de RPC sobre HTTP con mensajes XML estandarizados y neutrales respecto al lenguaje, mientras que RMI está limitado a comunicación entre extremos Java.
 
-> **[REFERENCIA CRUZADA]** El **Tema 21** (arquitectura Java EE) trata RMI y su papel histórico dentro de EJB (los *Enterprise JavaBeans* originalmente se invocaban de forma remota mediante RMI-IIOP) con mayor detalle de implementación; aquí se sitúa como uno de los paradigmas de comunicación remota que preceden y conviven con los servicios web.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 21** (arquitectura Java EE) trata RMI y su papel histórico dentro de EJB (los *Enterprise JavaBeans* originalmente se invocaban de forma remota mediante RMI-IIOP) con mayor detalle de implementación; aquí se sitúa como uno de los paradigmas de comunicación remota que preceden y conviven con los servicios web.
 
 ### 6.6. API REST y principios RESTful
 
@@ -482,7 +482,7 @@ Sobre la **interfaz uniforme**, los verbos HTTP se mapean de forma convencional 
 | `PATCH` | Actualizar (parcial) | No (en general) | `PATCH /expedientes/123` |
 | `DELETE` | Eliminar | Sí | `DELETE /expedientes/123` |
 
-> **[DATO CLAVE EXAMEN]** **Idempotente** significa que ejecutar la misma operación varias veces produce el **mismo efecto** que ejecutarla una sola vez. `GET`, `PUT` y `DELETE` son idempotentes; `POST` no lo es (crear el mismo recurso dos veces produce, en general, dos recursos distintos). Es una propiedad muy preguntada porque tiene implicaciones prácticas: reintentar automáticamente una petición fallida solo es seguro sin efectos secundarios si el verbo es idempotente.
+> **[DATO CLAVE]** **Idempotente** significa que ejecutar la misma operación varias veces produce el **mismo efecto** que ejecutarla una sola vez. `GET`, `PUT` y `DELETE` son idempotentes; `POST` no lo es (crear el mismo recurso dos veces produce, en general, dos recursos distintos). Es una propiedad con implicaciones prácticas: reintentar automáticamente una petición fallida solo es seguro sin efectos secundarios si el verbo es idempotente.
 
 Por último, el **modelo de madurez de Richardson** —propuesto por Leonard Richardson, no por Fielding, aunque se aplica sobre las ideas de este último— clasifica en cuatro niveles cuán «RESTful» es realmente una API:
 
@@ -491,7 +491,7 @@ Por último, el **modelo de madurez de Richardson** —propuesto por Leonard Ric
 - **Nivel 2**: se usan correctamente los **verbos HTTP** y los **códigos de estado** — es el nivel en el que se sitúa la inmensa mayoría de las APIs REST reales en producción.
 - **Nivel 3**: se añade **HATEOAS** (*Hypermedia as the Engine of Application State*): las respuestas incluyen enlaces a las acciones/recursos relacionados disponibles, de modo que el cliente puede navegar la API dinámicamente sin conocer de antemano todas las URIs — el nivel más purista y el menos adoptado en la práctica.
 
-> **[EJEMPLO AYTO MADRID]** El **Portal de Datos Abiertos** del Ayuntamiento de Madrid (datos.madrid.es) expone su catálogo mediante una **API REST** en la que cada conjunto de datos es un recurso identificado por URI, consultable con `GET` y devuelto en JSON — un ejemplo público y accesible de nivel 2 del modelo de Richardson que cualquier ciudadano puede consultar sin autenticación [MADRID-API].
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** El **Portal de Datos Abiertos** del Ayuntamiento de Madrid (datos.madrid.es) expone su catálogo mediante una **API REST** en la que cada conjunto de datos es un recurso identificado por URI, consultable con `GET` y devuelto en JSON — un ejemplo público y accesible de nivel 2 del modelo de Richardson que cualquier ciudadano puede consultar sin autenticación [MADRID-API].
 
 ---
 
@@ -514,7 +514,7 @@ Se presentan habitualmente como una evolución de SOA (§5.2), llevando sus prin
 | Complejidad operativa | Menor | Mayor (observabilidad, despliegue, red entre servicios) |
 | Consistencia de datos | Transaccional, fuerte (ACID) | Con frecuencia, **consistencia eventual** entre servicios |
 
-> **[DATO CLAVE EXAMEN]** Los microservicios no son «gratis»: a cambio de flexibilidad de despliegue y escalado independiente, introducen **complejidad operacional** significativa —hay que monitorizar, desplegar y versionar muchos más componentes— y a menudo renuncian a la **consistencia transaccional fuerte** entre servicios en favor de la **consistencia eventual**, un cambio de mentalidad de diseño no trivial.
+> **[DATO CLAVE]** Los microservicios no son «gratis»: a cambio de flexibilidad de despliegue y escalado independiente, introducen **complejidad operacional** significativa —hay que monitorizar, desplegar y versionar muchos más componentes— y a menudo renuncian a la **consistencia transaccional fuerte** entre servicios en favor de la **consistencia eventual**, un cambio de mentalidad de diseño no trivial.
 
 ### 7.2. Arquitectura orientada a eventos (EDA)
 
@@ -522,9 +522,9 @@ La **arquitectura orientada a eventos** (*Event-Driven Architecture*, EDA) estru
 
 Esta forma de comunicación **desacopla emisor y receptor** en dos dimensiones simultáneamente: en el **espacio** (el productor no conoce la dirección de red de los consumidores, solo la del canal) y en el **tiempo** (el consumidor no necesita estar disponible en el instante exacto en que se publica el evento; el *broker* puede retener el mensaje hasta que el consumidor esté listo para procesarlo).
 
-> **[EJEMPLO AYTO MADRID]** En el caso de referencia, cuando un expediente de licencia cambia a estado «resuelto», la capa de negocio de la Sede Electrónica **publica un evento** en el bus de mensajería, sin necesidad de conocer qué otros sistemas municipales están interesados. El sistema de **notificaciones** al ciudadano se suscribe a ese evento para enviar un aviso; el sistema de **estadísticas** de la Dirección General se suscribe para actualizar sus indicadores; si mañana se añade un tercer sistema interesado, no hay que modificar la capa de negocio en absoluto — solo dar de alta una nueva suscripción al mismo evento.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** En el caso de referencia, cuando un expediente de licencia cambia a estado «resuelto», la capa de negocio de la Sede Electrónica **publica un evento** en el bus de mensajería, sin necesidad de conocer qué otros sistemas municipales están interesados. El sistema de **notificaciones** al ciudadano se suscribe a ese evento para enviar un aviso; el sistema de **estadísticas** de la Dirección General se suscribe para actualizar sus indicadores; si mañana se añade un tercer sistema interesado, no hay que modificar la capa de negocio en absoluto — solo dar de alta una nueva suscripción al mismo evento.
 
-> **[REFERENCIA CRUZADA]** EDA se apoya técnicamente en el **middleware orientado a mensajes** (MOM) presentado en el §2.2.3 de este mismo tema como una de las familias de middleware.
+> **[RELACIÓN CON OTROS TEMAS]** EDA se apoya técnicamente en el **middleware orientado a mensajes** (MOM) presentado en el §2.2.3 de este mismo tema como una de las familias de middleware.
 
 ### 7.3. Contenedores y orquestación
 
@@ -532,7 +532,7 @@ Un **contenedor** es una unidad ligera de empaquetado y ejecución que virtualiz
 
 Cuando una arquitectura de microservicios (§7.1) despliega decenas o cientos de contenedores, gestionarlos manualmente —arrancarlos, reiniciarlos si fallan, escalarlos según la carga, distribuirlos entre varias máquinas físicas— deja de ser viable. La **orquestación de contenedores**, con **Kubernetes** como estándar de facto de la industria, automatiza estas tareas: define de forma declarativa **cuántas réplicas** de cada servicio deben estar en ejecución, **reinicia automáticamente** los contenedores que fallan, **balancea la carga** entre las réplicas disponibles y **escala horizontalmente** añadiendo o quitando réplicas según reglas configuradas.
 
-> **[REFERENCIA CRUZADA]** El **Tema 28** (virtualización de sistemas y virtualización de puestos de usuario) trata la virtualización de máquinas completas (hipervisores), un nivel de abstracción distinto y anterior al de los contenedores presentados aquí — conviene no confundir ambos conceptos en el examen: contenedor virtualiza el sistema operativo; máquina virtual virtualiza el hardware.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 28** (virtualización de sistemas y virtualización de puestos de usuario) trata la virtualización de máquinas completas (hipervisores), un nivel de abstracción distinto y anterior al de los contenedores presentados aquí — conviene no confundir ambos conceptos: contenedor virtualiza el sistema operativo; máquina virtual virtualiza el hardware.
 
 ### 7.4. Computación en la nube
 
@@ -540,4 +540,4 @@ La **computación en la nube** (*cloud computing*) es, según la definición de 
 
 En el contexto de este tema, la nube se cita como el **destino natural** de las arquitecturas distribuidas modernas: los servicios web (§5), los microservicios (§7.1) y los contenedores orquestados (§7.3) encuentran en las plataformas de nube pública el entorno de ejecución elástico —capaz de crecer y decrecer bajo demanda— que su diseño arquitectónico presupone.
 
-> **[REFERENCIA CRUZADA]** El **Tema 31** (paradigmas de computación distribuida y servicios en la nube) desarrolla en profundidad IaaS/PaaS/SaaS y los modelos de despliegue de nube; este tema (22) se limita a situar la nube como el cierre lógico de la evolución arquitectónica trazada desde el §1.2.3: de los sistemas centralizados, al cliente/servidor, a los servicios, a los microservicios y contenedores desplegados de forma elástica en la nube.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 31** (paradigmas de computación distribuida y servicios en la nube) desarrolla en profundidad IaaS/PaaS/SaaS y los modelos de despliegue de nube; este tema (22) se limita a situar la nube como el cierre lógico de la evolución arquitectónica trazada desde el §1.2.3: de los sistemas centralizados, al cliente/servidor, a los servicios, a los microservicios y contenedores desplegados de forma elástica en la nube.

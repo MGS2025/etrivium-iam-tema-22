@@ -98,7 +98,7 @@ C) El Tema 31 trata exclusivamente de seguridad y no tiene relación con este te
 
 **Correcta: B) El Tema 31 desarrolla en profundidad IaaS/PaaS/SaaS y los modelos de despliegue de nube que el Tema 22 solo sitúa como cierre de la evolución arquitectónica** Este tema sienta las bases arquitectónicas (cliente/servidor, capas, servicios) sobre las que se apoya la infraestructura de provisión que trata el Tema 31.
 
-*Referencia: §1.2.3 [REFERENCIA CRUZADA]*
+*Referencia: §1.2.3 [RELACIÓN CON OTROS TEMAS]*
 </details>
 
 ---
@@ -149,7 +149,7 @@ C) La obligación legal de usar exclusivamente HTML
 
 **Correcta: B) El problema de despliegue del cliente pesado: instalar y actualizar software en cada puesto tiene un coste de mantenimiento alto** Un cliente ligero centraliza la actualización en el servidor, transparente al usuario final.
 
-*Referencia: §2.2.1 [DATO CLAVE EXAMEN]*
+*Referencia: §2.2.1 [DATO CLAVE]*
 </details>
 
 ---
@@ -183,7 +183,7 @@ C) El horizontal solo es aplicable a bases de datos, nunca a servidores de aplic
 
 **Correcta: A) El vertical añade más CPU/memoria a una misma máquina (con límite físico); el horizontal añade más máquinas/instancias en paralelo, sin techo físico** Las arquitecturas modernas priorizan el horizontal porque además aporta tolerancia a fallos.
 
-*Referencia: §2.2.2 [DATO CLAVE EXAMEN]*
+*Referencia: §2.2.2 [DATO CLAVE]*
 </details>
 
 ---
@@ -217,7 +217,7 @@ C) El middleware orientado a mensajes (MOM), como JMS, RabbitMQ o Kafka
 
 **Correcta: C) El middleware orientado a mensajes (MOM), como JMS, RabbitMQ o Kafka** Permite el envío de mensajes/eventos asíncronos entre aplicaciones sin acoplamiento directo emisor-receptor.
 
-*Referencia: §2.2.3 [REFERENCIA CRUZADA]*
+*Referencia: §2.2.3 [RELACIÓN CON OTROS TEMAS]*
 </details>
 
 ---
@@ -234,7 +234,7 @@ C) El diseño de interfaces de usuario accesibles
 
 **Correcta: A) El modelo TCP/IP y el modelo OSI: la infraestructura de comunicaciones sobre la que se apoyan, sin necesidad de conocerla en detalle, los protocolos de aplicación de este Tema 22** Este tema se sitúa deliberadamente en el nivel de aplicación de la pila de protocolos.
 
-*Referencia: §2.2.4 [REFERENCIA CRUZADA]*
+*Referencia: §2.2.4 [RELACIÓN CON OTROS TEMAS]*
 </details>
 
 ---
@@ -251,7 +251,7 @@ C) Reducir el número de campos del formulario de solicitud
 
 **Correcta: B) El escalado horizontal, añadiendo instancias temporales del servidor de aplicaciones detrás de un balanceador de carga** El escalado vertical exigiría sobredimensionar permanentemente el hardware, con coste ocioso el resto del año.
 
-*Referencia: §2.2.2 [EJEMPLO AYTO MADRID]*
+*Referencia: §2.2.2 [EJEMPLO DE APLICACIÓN EN EL AYTO]*
 </details>
 
 ---
@@ -268,7 +268,7 @@ C) De forma ambigua, repartida entre el cliente y el servidor de datos (procedim
 
 **Correcta: C) De forma ambigua, repartida entre el cliente y el servidor de datos (procedimientos almacenados y disparadores)** Esta ambigüedad es precisamente lo que resuelve el modelo de 3 capas al introducir un lugar único y claro para la lógica de negocio.
 
-*Referencia: §3.1 [DATO CLAVE EXAMEN]*
+*Referencia: §3.1 [DATO CLAVE]*
 </details>
 
 ---
@@ -285,7 +285,7 @@ C) El Tema 33 (comunicaciones y medios de transmisión)
 
 **Correcta: A) El Tema 19 (lenguajes de interrogación de bases de datos, ANSI SQL, procedimientos almacenados y disparadores)** Es una referencia cruzada explícita señalada en el §3.1 de este tema.
 
-*Referencia: §3.1 [REFERENCIA CRUZADA]*
+*Referencia: §3.1 [RELACIÓN CON OTROS TEMAS]*
 </details>
 
 ---
@@ -302,7 +302,7 @@ C) Reducir a la mitad el número de líneas de código del cliente
 
 **Correcta: B) El desacoplamiento: el cliente ya no conoce el esquema de datos, solo el contrato que expone la capa de negocio** Cambiar el modelo de datos, o incluso el motor de base de datos, no debería requerir tocar el cliente.
 
-*Referencia: §3.2 [DATO CLAVE EXAMEN]*
+*Referencia: §3.2 [DATO CLAVE]*
 </details>
 
 ---
@@ -336,7 +336,7 @@ C) El nivel físico siempre es menor en número que las capas lógicas
 
 **Correcta: A) La capa lógica es una agrupación de responsabilidades en el diseño (presentación, negocio, datos); el nivel físico es la máquina o proceso donde se despliega — no siempre coinciden en número** Una aplicación con 3 capas lógicas puede desplegarse en 5 o más niveles físicos en producción.
 
-*Referencia: §3.3 [DATO CLAVE EXAMEN]*
+*Referencia: §3.3 [DATO CLAVE]*
 </details>
 
 ---
@@ -353,7 +353,7 @@ C) 1 capa lógica y 1 nivel físico
 
 **Correcta: B) 3 capas lógicas y bastantes más de 3 niveles físicos** Presentación, negocio y datos son las 3 capas lógicas clásicas, desplegadas sobre balanceador, varias instancias de aplicación, caché y clúster de datos.
 
-*Referencia: §3.3 [EJEMPLO AYTO MADRID]*
+*Referencia: §3.3 [EJEMPLO DE APLICACIÓN EN EL AYTO]*
 </details>
 
 ---
@@ -404,7 +404,7 @@ C) Uso obligatorio de XML y prohibición de JSON
 
 **Correcta: B) Encapsulación (cada capa oculta su implementación tras una interfaz) y dependencia unidireccional (de arriba hacia abajo)** Permiten sustituir una capa sin afectar a las demás, siempre que el contrato entre capas se respete.
 
-*Referencia: §4.1 [DATO CLAVE EXAMEN]*
+*Referencia: §4.1 [DATO CLAVE]*
 </details>
 
 ---
@@ -455,7 +455,7 @@ C) Renderizar la interfaz gráfica del usuario final
 
 **Correcta: B) Leer/escribir el estado persistente y traducir entre el modelo de la capa de negocio y el modelo de almacenamiento, sin exponer el esquema interno** El diseño concreto de esta capa es objeto de los Temas 15, 16 y 17.
 
-*Referencia: §4.4 [REFERENCIA CRUZADA]*
+*Referencia: §4.4 [RELACIÓN CON OTROS TEMAS]*
 </details>
 
 ---
@@ -487,9 +487,9 @@ C) La capa de negocio llama a la capa de acceso a datos
 
 <details><summary>Respuesta</summary>
 
-**Correcta: A) La capa de acceso a datos invoca directamente a la capa de presentación para notificar un cambio** Es el antipatrón más citado en exámenes de este bloque: las dependencias deben fluir siempre en una única dirección.
+**Correcta: A) La capa de acceso a datos invoca directamente a la capa de presentación para notificar un cambio** Es el antipatrón más habitual: las dependencias deben fluir siempre en una única dirección.
 
-*Referencia: §4.1 [DATO CLAVE EXAMEN]*
+*Referencia: §4.1 [DATO CLAVE]*
 </details>
 
 ---
@@ -523,7 +523,7 @@ C) Porque un cliente ligero es manipulable por el propio usuario (herramientas d
 
 **Correcta: C) Porque un cliente ligero es manipulable por el propio usuario (herramientas de desarrollador, peticiones directas a la API); la validación autoritativa debe repetirse siempre en el servidor** Centralizar la seguridad en la capa de negocio evita que dependa de un cliente que el usuario controla.
 
-*Referencia: §4.6 [DATO CLAVE EXAMEN]*
+*Referencia: §4.6 [DATO CLAVE]*
 </details>
 
 ---
@@ -557,7 +557,7 @@ C) Una marca comercial de un fabricante de software
 
 **Correcta: B) Un estilo arquitectónico que estructura un sistema como un conjunto de servicios débilmente acoplados que se comunican mediante contratos explícitos** No es una tecnología concreta; los servicios web son su implementación más habitual, pero no la única.
 
-*Referencia: §5.2 [DATO CLAVE EXAMEN]*
+*Referencia: §5.2 [DATO CLAVE]*
 </details>
 
 ---
@@ -591,7 +591,7 @@ C) SOA es posterior cronológicamente a los microservicios
 
 **Correcta: A) SOA tiende a compartir infraestructura común (bus de servicios empresarial, ESB); los microservicios enfatizan la autonomía total, incluida a menudo la de los datos** Los microservicios se presentan como una evolución o reinterpretación radical de los principios SOA.
 
-*Referencia: §5.2 [REFERENCIA CRUZADA]*
+*Referencia: §5.2 [RELACIÓN CON OTROS TEMAS]*
 </details>
 
 ---
@@ -676,7 +676,7 @@ C) Que ambos estilos conviven en la misma arquitectura, cada uno donde mejor enc
 
 **Correcta: C) Que ambos estilos conviven en la misma arquitectura, cada uno donde mejor encaja: SOAP en integración estable y crítica, REST en clientes web/móviles modernos** SOAP no está "muerto"; sigue siendo el estándar de facto en integraciones que requieren garantías formales fuertes.
 
-*Referencia: §5.4.2 [EJEMPLO AYTO MADRID]*
+*Referencia: §5.4.2 [EJEMPLO DE APLICACIÓN EN EL AYTO]*
 </details>
 
 ---
@@ -710,7 +710,7 @@ C) Ambos códigos son sinónimos exactos y pueden usarse indistintamente
 
 **Correcta: B) 401 (Unauthorized) indica que el cliente no está autenticado o su autenticación no es válida; 403 (Forbidden) indica que está autenticado pero no tiene permiso para esa acción** Es una de las confusiones más explotadas en preguntas tipo test de este bloque.
 
-*Referencia: §6.1 [DATO CLAVE EXAMEN]*
+*Referencia: §6.1 [DATO CLAVE]*
 </details>
 
 ---
@@ -727,7 +727,7 @@ C) Confidencialidad (cifrado del contenido), integridad (detección de alteracio
 
 **Correcta: C) Confidencialidad (cifrado del contenido), integridad (detección de alteraciones) y autenticación del servidor mediante certificado X.509** HTTPS no es un protocolo distinto de HTTP, sino HTTP transportado sobre una conexión cifrada con TLS.
 
-*Referencia: §6.1 [RFC8446]*
+*Referencia: §6.1 [RFC9846]*
 </details>
 
 ---
@@ -810,9 +810,9 @@ C) JWT sustituyó por completo a OAuth 2.0 desde 2020
 
 <details><summary>Respuesta</summary>
 
-**Correcta: B) OAuth 2.0 es un framework de autorización (cómo se obtiene un token de forma segura); JWT es, con frecuencia, el formato concreto que adopta ese token** Confundir "usar JWT" con "implementar OAuth 2.0" es un error frecuente y muy preguntado.
+**Correcta: B) OAuth 2.0 es un framework de autorización (cómo se obtiene un token de forma segura); JWT es, con frecuencia, el formato concreto que adopta ese token** Confundir "usar JWT" con "implementar OAuth 2.0" es un error frecuente.
 
-*Referencia: §6.2 [DATO CLAVE EXAMEN]*
+*Referencia: §6.2 [DATO CLAVE]*
 </details>
 
 ---
@@ -880,7 +880,7 @@ C) Está en desuso en la práctica: su función de catálogo descubrible ha sido
 
 **Correcta: C) Está en desuso en la práctica: su función de catálogo descubrible ha sido sustituida por catálogos de API modernos (OpenAPI/Swagger)** La promesa de un registro público universal de servicios nunca llegó a adoptarse a gran escala.
 
-*Referencia: §6.4 [DATO CLAVE EXAMEN]*
+*Referencia: §6.4 [DATO CLAVE]*
 </details>
 
 ---
@@ -897,7 +897,7 @@ C) Un formato de fichero de configuración
 
 **Correcta: A) Un paradigma de comunicación en el que se invoca un procedimiento en otro espacio de direcciones como si fuera una llamada local, ocultando serialización y transporte** Es el paradigma conceptual subyacente al modelo de "operaciones" de SOAP.
 
-*Referencia: §6.5 [RFC1831]*
+*Referencia: §6.5 [RFC5531]*
 </details>
 
 ---
@@ -914,7 +914,7 @@ C) No tienen ninguna relación conceptual entre sí
 
 **Correcta: B) RPC es el paradigma general de invocación remota; RMI es su implementación nativa en la plataforma Java, con stubs y skeletons** RMI está limitado a comunicación entre extremos Java, a diferencia de SOAP, neutral respecto al lenguaje.
 
-*Referencia: §6.5 [DATO CLAVE EXAMEN]*
+*Referencia: §6.5 [DATO CLAVE]*
 </details>
 
 ---
@@ -948,7 +948,7 @@ C) La imposibilidad técnica de escalar de forma independiente cada servicio
 
 **Correcta: A) Mayor complejidad operacional (observabilidad, despliegue, red entre servicios) y, con frecuencia, renuncia a la consistencia transaccional fuerte en favor de la consistencia eventual** No son "gratis": a cambio de flexibilidad, hay que monitorizar y versionar muchos más componentes.
 
-*Referencia: §7.1 [DATO CLAVE EXAMEN]*
+*Referencia: §7.1 [DATO CLAVE]*
 </details>
 
 ---
@@ -982,7 +982,7 @@ C) Que un tercer sistema interesado pueda darse de alta como nuevo suscriptor si
 
 **Correcta: C) Que un tercer sistema interesado pueda darse de alta como nuevo suscriptor sin modificar en absoluto la capa de negocio que publica el evento** Es la ventaja central del desacoplamiento productor-consumidor propio de EDA.
 
-*Referencia: §7.2 [EJEMPLO AYTO MADRID]*
+*Referencia: §7.2 [EJEMPLO DE APLICACIÓN EN EL AYTO]*
 </details>
 
 ---

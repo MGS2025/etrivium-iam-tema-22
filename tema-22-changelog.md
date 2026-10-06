@@ -4,6 +4,21 @@
 
 ---
 
+## v1.3 — 2026-10-01 — Normas vigentes y correcciones comunes de la revisión
+
+**Motivo**: revisión de la serie del 01-10-2026 (decisiones de Joan y María): normas caducadas con el patrón de dos filas en Fuentes y correcciones comunes (referencias al cliente y al origen del material, promesas sobre el examen, AP → AAPP).
+
+### Cambios
+
+- **RFC 8446 → RFC 9846** (TLS 1.3, julio de 2026): fila vigente `[RFC9846]` y `[RFC8446]` como histórica; la cita de §6.1 y la referencia de la pregunta 42 pasan a `[RFC9846]`. La respuesta no cambia.
+- **RFC 1831 → RFC 5531** (RPC v2, mayo de 2009, mismo título y protocolo): fila vigente `[RFC5531]` y `[RFC1831]` como histórica; la cita de §6.5 y la referencia de la pregunta 52 pasan a `[RFC5531]`. La respuesta no cambia.
+- Leyenda de las cajas: se quita «con alta probabilidad de aparecer en el test oficial».
+- Fuera las promesas sobre el examen en contenido y en las explicaciones de dos preguntas del test (sin cambio de enunciado, opciones ni respuesta).
+- Validación: fuera «por decisión de Joan».
+- Títulos de las cajas homogeneizados con los temas 1-10 (revisión jurídica): «Dato clave», «Ejemplo de aplicación en el Ayto» y «Relación con otros temas»; las cajas «Ejercicio resuelto» no cambian.
+
+---
+
 ## v1.2 — 2026-09-06 — Marcado del apartado complementario
 
 **Estado**: pendiente de validación por el IAM.

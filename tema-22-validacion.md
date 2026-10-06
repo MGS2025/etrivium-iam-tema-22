@@ -20,8 +20,8 @@
 
 ## 2. Contenido teórico
 
-- [ ] El nivel de profundidad (7 secciones, sección 7 "Tendencias" desarrollada completa por decisión de Joan pese a no estar literal en el enunciado oficial) es adecuado para C1
-- [ ] El solape con el Tema 21 en SOAP/REST/WSDL/UDDI está tratado con el mismo nivel de detalle, por decisión de Joan (sin diferenciar enfoque agnóstico/Java)
+- [ ] El nivel de profundidad (7 secciones, sección 7 "Tendencias" desarrollada completa pese a no estar literal en el enunciado oficial) es adecuado para C1
+- [ ] El solape con el Tema 21 en SOAP/REST/WSDL/UDDI está tratado con el mismo nivel de detalle (sin diferenciar enfoque agnóstico/Java)
 - [ ] El solape con el Tema 31 (cloud, §7.4) y con el Tema 35 (HTTP/HTTPS/TLS, §6.1) está correctamente acotado mediante referencias cruzadas, sin duplicar contenido de detalle
 - [ ] Las distinciones clave (layer≠tier, SOA≠servicios web, OAuth≠JWT, RPC≠RMI, contenedor≠VM) son correctas y están bien remarcadas
 - [ ] El caso de referencia (arquitectura de la Sede Electrónica) es verosímil y coherente en todo el tema
