@@ -73,7 +73,7 @@
   <path d="M462 90 L488 90" stroke="#888" stroke-width="3" marker-end="url(#a2)"/>
   <rect x="490" y="50" width="170" height="80" rx="6" fill="#0055a0"/><text x="575" y="76" text-anchor="middle" class="t2">SERVIDOR</text><text x="575" y="94" text-anchor="middle" class="s2">Gestión de recursos</text><text x="575" y="108" text-anchor="middle" class="s2">y concurrencia (§2.2.2)</text>
   <rect x="130" y="160" width="420" height="86" rx="6" fill="#2d8659"/><text x="340" y="180" text-anchor="middle" class="t2">MIDDLEWARE (§2.2.3)</text><text x="340" y="198" text-anchor="middle" class="s2">Acceso a datos · orientado a objetos · MOM</text><text x="340" y="214" text-anchor="middle" class="s2">Servicios web · transaccional</text><text x="340" y="232" text-anchor="middle" class="s2">Oculta la complejidad de la comunicación distribuida</text>
-  <path d="M340 132 L340 158" stroke="#888" stroke-width="3" marker-end="url(#a2)"/>
+  <path d="M340 132 L340 145" stroke="#888" stroke-width="3" marker-end="url(#a2)"/>
   <defs><marker id="a2" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#888"/></marker></defs>
   <text x="340" y="280" text-anchor="middle" style="font:700 11px system-ui;fill:#d13c3c">Relación asimétrica y de petición-respuesta: el cliente inicia, el servidor responde</text>
   <text x="340" y="300" text-anchor="middle" class="l2">Un mismo proceso puede ser servidor frente a un interlocutor y cliente frente a otro</text>
@@ -122,11 +122,11 @@
   <path d="M80 92 L80 116" stroke="#888" stroke-width="2.5" marker-end="url(#a4)"/>
   <rect x="20" y="118" width="120" height="44" rx="5" fill="#d13c3c"/><text x="80" y="136" text-anchor="middle" class="t4">Base de datos</text><text x="80" y="152" text-anchor="middle" class="s4">+ procedimientos</text>
   <text x="270" y="40" text-anchor="middle" class="l4">3-TIER</text>
-  <rect x="200" y="48" width="120" height="36" rx="5" fill="#0055a0"/><text x="260" y="70" text-anchor="middle" class="t4">Cliente (presentación)</text>
+  <rect x="180" y="48" width="160" height="36" rx="5" fill="#0055a0"/><text x="260" y="70" text-anchor="middle" class="t4">Cliente (presentación)</text>
   <path d="M260 84 L260 104" stroke="#888" stroke-width="2.5" marker-end="url(#a4)"/>
-  <rect x="200" y="106" width="120" height="36" rx="5" fill="#2d8659"/><text x="260" y="128" text-anchor="middle" class="t4">Servidor aplicaciones</text>
+  <rect x="180" y="106" width="160" height="36" rx="5" fill="#2d8659"/><text x="260" y="128" text-anchor="middle" class="t4">Servidor aplicaciones</text>
   <path d="M260 142 L260 162" stroke="#888" stroke-width="2.5" marker-end="url(#a4)"/>
-  <rect x="200" y="164" width="120" height="36" rx="5" fill="#e89822"/><text x="260" y="186" text-anchor="middle" class="t4">Base de datos</text>
+  <rect x="180" y="164" width="160" height="36" rx="5" fill="#e89822"/><text x="260" y="186" text-anchor="middle" class="t4">Base de datos</text>
   <text x="500" y="40" text-anchor="middle" class="l4">N-TIER</text>
   <rect x="420" y="48" width="160" height="30" rx="5" fill="#0055a0"/><text x="500" y="68" text-anchor="middle" class="t4">Balanceador de carga</text>
   <path d="M460 78 L440 98" stroke="#888" stroke-width="2" marker-end="url(#a4)"/><path d="M540 78 L560 98" stroke="#888" stroke-width="2" marker-end="url(#a4)"/>
@@ -268,7 +268,7 @@
   <rect x="270" y="46" width="140" height="50" rx="5" fill="#0055a0"/><text x="340" y="68" text-anchor="middle" class="t9">Client</text><text x="340" y="84" text-anchor="middle" class="s9">La aplicación</text>
   <rect x="510" y="46" width="140" height="50" rx="5" fill="#2d8659"/><text x="580" y="68" text-anchor="middle" class="t9">Authorization Server</text><text x="580" y="84" text-anchor="middle" class="s9">Emite el token</text>
   <rect x="510" y="150" width="140" height="50" rx="5" fill="#e89822"/><text x="580" y="172" text-anchor="middle" class="t9">Resource Server</text><text x="580" y="188" text-anchor="middle" class="s9">Protege el recurso</text>
-  <path d="M100 96 L100 130 L268 130" stroke="#0055a0" stroke-width="2.5" marker-end="url(#a9)" fill="none"/><text x="170" y="122" text-anchor="middle" style="font:9px system-ui;fill:#0055a0">1. autoriza</text>
+  <path d="M100 96 L100 130 L300 130 L300 104" stroke="#0055a0" stroke-width="2.5" marker-end="url(#a9)" fill="none"/><text x="170" y="122" text-anchor="middle" style="font:9px system-ui;fill:#0055a0">1. autoriza</text>
   <path d="M410 60 L508 60" stroke="#0055a0" stroke-width="2.5" marker-end="url(#a9)"/><text x="460" y="54" text-anchor="middle" style="font:9px system-ui;fill:#0055a0">2. solicita</text>
   <path d="M508 86 L410 86" stroke="#2d8659" stroke-width="2.5" marker-end="url(#a9)"/><text x="460" y="100" text-anchor="middle" style="font:9px system-ui;fill:#2d8659">3. token</text>
   <path d="M412 96 L508 175" stroke="#e89822" stroke-width="2.5" marker-end="url(#a9)" fill="none"/><text x="500" y="220" text-anchor="middle" style="font:9px system-ui;fill:#e89822">4. presenta token → accede</text>
@@ -323,7 +323,7 @@
 **Propósito**: Contrastar unidad de despliegue, escalado y base de datos entre el monolito y el microservicio.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img" aria-label="Comparativa entre monolito, con toda la aplicacion desplegada junta y una base de datos compartida, y microservicios, con servicios pequenos autonomos desplegados y escalados de forma independiente y con base de datos propia cada uno">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 350" role="img" aria-label="Comparativa entre monolito, con toda la aplicacion desplegada junta y una base de datos compartida, y microservicios, con servicios pequenos autonomos desplegados y escalados de forma independiente y con base de datos propia cada uno">
   <style>.t11{font:700 11.5px system-ui,sans-serif;fill:#fff}.s11{font:9px system-ui,sans-serif;fill:#fff}.l11{font:10.5px system-ui,sans-serif;fill:#444}.h11{font:700 13px system-ui,sans-serif;fill:#0055a0}</style>
   <text x="340" y="20" text-anchor="middle" class="h11">Monolito vs. microservicios</text>
   <text x="170" y="46" text-anchor="middle" style="font:700 12px system-ui;fill:#0055a0">MONOLITO</text>
@@ -344,7 +344,7 @@
   <text x="340" y="280" text-anchor="middle" style="font:700 11px system-ui;fill:#d13c3c">Escalado independiente y despliegue autónomo, a cambio de mayor complejidad operacional</text>
   <text x="340" y="298" text-anchor="middle" class="l11">Consistencia fuerte (ACID) en el monolito vs. consistencia eventual habitual entre microservicios</text>
   <text x="340" y="314" text-anchor="middle" class="l11">Los microservicios son una evolución radical de los principios de SOA (§5.2)</text>
-  <text x="670" y="332" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: NEWMAN, cap. 1]</text>
+  <text x="670" y="342" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: NEWMAN, cap. 1]</text>
 </svg>
 ```
 
@@ -360,11 +360,11 @@
   <style>.t12{font:700 11.5px system-ui,sans-serif;fill:#fff}.s12{font:9.5px system-ui,sans-serif;fill:#fff}.l12{font:10.5px system-ui,sans-serif;fill:#444}.h12{font:700 13px system-ui,sans-serif;fill:#0055a0}</style>
   <text x="330" y="20" text-anchor="middle" class="h12">Contenedores → orquestación → nube</text>
   <rect x="60" y="248" width="540" height="60" rx="6" fill="#0055a0"/><text x="330" y="272" text-anchor="middle" class="t12">CONTENEDORES — §7.3</text><text x="330" y="292" text-anchor="middle" class="s12">Virtualizan a nivel de SO (namespaces/cgroups), arranque en segundos</text>
-  <path d="M330 246 L330 218" stroke="#888" stroke-width="3" marker-end="url(#a12)"/>
+  <path d="M330 248 L330 229" stroke="#888" stroke-width="3" marker-end="url(#a12)"/>
   <rect x="60" y="164" width="540" height="60" rx="6" fill="#2d8659"/><text x="330" y="188" text-anchor="middle" class="t12">ORQUESTACIÓN — §7.3</text><text x="330" y="208" text-anchor="middle" class="s12">Kubernetes: despliegue, autoescalado y recuperación automática</text>
-  <path d="M330 162 L330 134" stroke="#888" stroke-width="3" marker-end="url(#a12)"/>
+  <path d="M330 165 L330 146" stroke="#888" stroke-width="3" marker-end="url(#a12)"/>
   <rect x="60" y="80" width="540" height="60" rx="6" fill="#e89822"/><text x="330" y="104" text-anchor="middle" class="t12">COMPUTACIÓN EN LA NUBE — §7.4</text><text x="330" y="124" text-anchor="middle" class="s12">IaaS/PaaS/SaaS bajo demanda — desarrollado en el Tema 31</text>
-  <defs><marker id="a12" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#888"/></marker></defs>
+  <defs><marker id="a12" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L12 7 L0 14 z" fill="#888"/></marker></defs>
   <text x="330" y="336" text-anchor="middle" style="font:700 11px system-ui;fill:#d13c3c">Contenedor virtualiza el SO; máquina virtual (Tema 28) virtualiza el hardware — no confundir</text>
   <text x="650" y="356" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: K8S-DOCS; NIST800145]</text>
 </svg>
